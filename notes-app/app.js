@@ -1,10 +1,18 @@
 // const fs = require('fs')
 
-const getNotes = require('./notes.js')
+//import chalk from 'chalk'
 
-const notes = getNotes()
+  const chalk = require('chalk')
 
-console.log(notes);
+// const getNotes = require('./notes.js')
+
+// const notes = getNotes()
+
+// console.log(notes);
+
+
+console.log(chalk.green('Hello world!'));
+
 
 
 // fs.writeFileSync('notes.txt', "added again")
