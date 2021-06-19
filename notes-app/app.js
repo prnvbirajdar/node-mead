@@ -1,5 +1,12 @@
-const fs = require('fs')
+// const fs = require('fs')
 
-fs.writeFileSync('notes.txt', "added again")
+const getNotes = require('./notes.js')
 
-fs.appendFileSync('notes.txt', "more stull appended")
+const notes = getNotes()
+
+console.log(notes);
+
+
+// fs.writeFileSync('notes.txt', "added again")
+
+// fs.appendFileSync('notes.txt', "more stull appended")
