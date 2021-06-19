@@ -1,8 +1,7 @@
-// const fs = require('fs')
 
-//import chalk from 'chalk'
+import chalk from 'chalk'
 
-  const chalk = require('chalk')
+//  const chalk = require('chalk')
 
 // const getNotes = require('./notes.js')
 
@@ -11,10 +10,16 @@
 // console.log(notes);
 
 
-console.log(chalk.green('Hello world!'));
+console.log(chalk.green('Hello world'));
+
+console.log(process.argv);
 
 
 
+
+
+// CREATING FILE, WRITING, AND APPENDING STUFF TO TEXT DOC
+
+// const fs = require('fs')
 // fs.writeFileSync('notes.txt', "added again")
-
 // fs.appendFileSync('notes.txt', "more stull appended")
