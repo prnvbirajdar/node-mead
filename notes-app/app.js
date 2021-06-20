@@ -1,5 +1,4 @@
-
-import chalk from 'chalk'
+const yargs= require('yargs');
 
 //  const chalk = require('chalk')
 
@@ -10,9 +9,12 @@ import chalk from 'chalk'
 // console.log(notes);
 
 
-console.log(chalk.green('Hello world'));
+//console.log(chalk.green('Hello world'));
 
 console.log(process.argv);
+
+console.log(yargs.argv);
+
 
 
 
