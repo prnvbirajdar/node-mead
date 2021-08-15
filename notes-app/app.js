@@ -12,7 +12,6 @@ const yargs = require('yargs');
 
 //console.log(chalk.green('Hello world'));
 
-
 // YARGS COMMAND 
 
 // Add
@@ -35,41 +34,40 @@ yargs.command({
     handler: function () {
         console.log('notes title: ', argv.title);
         console.log('notes body: ', argv.body);
-
     }
 })
 
 // Remove
 
-yargs.command({
-    command: 'remove',
-    describe: 'Removes an existing note',
-    handler: function () {
-        console.log('note removed');
-    }
-})
+// yargs.command({
+//     command: 'remove',
+//     describe: 'Removes an existing note',
+//     handler: function () {
+//         console.log('note removed');
+//     }
+// })
 
 
 // List
 
-yargs.command({
-    command: 'list',
-    describe: 'Lists all existing notes',
-    handler: function () {
-        console.log('notes list');
-    }
-})
+// yargs.command({
+//     command: 'list',
+//     describe: 'Lists all existing notes',
+//     handler: function () {
+//         console.log('notes list');
+//     }
+// })
 
 
 // Read
 
-yargs.command({
-    command: 'read',
-    describe: 'Reads a note',
-    handler: function () {
-        console.log('note read');
-    }
-})
+// yargs.command({
+//     command: 'read',
+//     describe: 'Reads a note',
+//     handler: function () {
+//         console.log('note read');
+//     }
+// })
 
 
 
