@@ -14,8 +14,6 @@ const geocodeFunc = (location, callback) => {
                 long: response.body.features[0].center[0],
                 place: response.body.features[0].place_name
             } )
-            console.log('lat', response.body.features[0].center[1]);
-            console.log('long', response.body.features[0].center[0]);
         }
     })    
 }
