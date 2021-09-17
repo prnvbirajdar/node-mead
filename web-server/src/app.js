@@ -38,16 +38,16 @@ app.get('/blog', (req, res)=>{
     })
 })
 
-// app.get('/help', (req, res)=>{
-//     res.send('hello express')
-// })
-
-// app.get('/about', (req, res)=>{
-//     res.send('about')
-// })
-
 app.get('/weather', (req, res)=>{
-    res.send('weather')
+    if(!req.query.address){
+       return res.send({
+            error: "error, no address"
+        })
+    }
+    res.send({
+        message: "weather data",
+        address: req.query.address
+    })
 })
 
 
