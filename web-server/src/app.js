@@ -1,6 +1,8 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const geocodeFunc = require('./utils/geocodeFunc.js')
+const weatherFunc = require('./utils/weatherFunc')
 
 const app = express()
 
@@ -44,9 +46,25 @@ app.get('/weather', (req, res)=>{
             error: "error, no address"
         })
     }
-    res.send({
-        message: "weather data",
-        address: req.query.address
+
+    geocodeFunc(req.query.address, (error, {lat, long, place} = {}) => {
+
+        if (error){
+            return res.send({ error })        
+        }
+    
+        weatherFunc(lat, long, (error, forecastData)=> {
+            if (error){
+                return res.send({ error })            
+            }
+
+            res.send({
+                message: "weather data",
+                address: req.query.address,
+                place,
+                forecast: forecastData
+            })
+        } )
     })
 })
 
